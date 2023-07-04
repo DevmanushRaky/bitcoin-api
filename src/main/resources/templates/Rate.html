@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+  <title>Bitcoin Rate</title>
+</head>
+<body>
+
+<div class="container m-3">
+  <div class="card">
+    <h5 class="card-header">iTion Solutions</h5>
+    <div class="card-body">
+      <h5 class="card-title">Assignment Completed</h5>
+      <p class="card-text"> <a href="/bitcoin" class="btn btn-primary"> Go Back </a></p>
+    <h5 th:if="${response.wordRate}">Bitcoin Rate: <span th:text="${response.wordRate}"></span></h5>
+    </div>
+  </div>
+</div>
+
+
+<div class="container m-3">
+  <div class="card">
+      <h5 class="card-title">Other Response from Server</h5>
+    <div class="card-body">
+
+      <p>Updated: <span th:text="${response.time.updated}"></span></p>
+      <p>Disclaimer: <span th:text="${response.disclaimer}"></span></p>
+      <p>Chart Name: <span th:text="${response.chartName}"></span></p>
+
+      <h5>BPI - USD:</h5>
+      <p>Code: <span th:text="${response.bpi.USD.code}"></span></p>
+      <p>Symbol: <span th:text="${response.bpi.USD.symbol}"></span></p>
+      <p>Rate: <span th:text="${response.bpi.USD.rate}"></span></p>
+      <p>Description: <span th:text="${response.bpi.USD.description}"></span></p>
+<!--      <p th:if="${response.bpi != null}">Rate Float: <span th:text="${response.bpi.USD.rate_float}"></span></p>-->
+      <h5>BPI - GBP:</h5>
+      <p>Code: <span th:text="${response.bpi.GBP.code}"></span></p>
+      <p>Symbol: <span th:text="${response.bpi.GBP.symbol}"></span></p>
+      <p>Rate: <span th:text="${response.bpi.GBP.rate}"></span></p>
+      <p>Description: <span th:text="${response.bpi.GBP.description}"></span></p>
+<!--      <p th:if="${response.bpi != null}">Rate Float: <span th:text="${response.bpi.GBP.rate_float}"></span></p>-->
+      <h5>BPI - EUR:</h5>
+      <p>Code: <span th:text="${response.bpi.EUR.code}"></span></p>
+      <p>Symbol: <span th:text="${response.bpi.EUR.symbol}"></span></p>
+      <p>Rate: <span th:text="${response.bpi.EUR.rate}"></span></p>
+      <p>Description: <span th:text="${response.bpi.EUR.description}"></span></p>
+<!--      <p th:if="${response.bpi != null}">Rate Float: <span th:text="${response.bpi.EUR.rate_float}"></span></p>-->
+    </div>
+  </div>
+</div>
+
+
+
+
+<script th:inline="javascript">
+    console.log(/*[[${response}]]*/);
+</script>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Mrfgqzj93gmY4pDf+i1qszrXU5U4DGXjB+o5vqo3sI2n1RvWFjWGN0M5Pe5EmB8u"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

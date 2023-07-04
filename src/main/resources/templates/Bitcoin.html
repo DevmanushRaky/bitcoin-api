@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <title>Bitcoin Rate</title>
+</head>
+<body>
+
+<div class="container m-3">
+    <div class="card">
+        <h5 class="card-header">iTion Solutions</h5>
+        <div class="card-body">
+            <h5 class="card-title">Assignment Completed</h5>
+            <p class="card-text">Click this button to know BitCoin Rate</p>
+            <a href="/bitcoin/rate" class="btn btn-primary">Click Me</a>
+        </div>
+        <h5 th:if="${error}"><span th:text="${error}"></span></h5>
+    </div>
+</div>
+
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Mrfgqzj93gmY4pDf+i1qszrXU5U4DGXjB+o5vqo3sI2n1RvWFjWGN0M5Pe5EmB8u"
+        crossorigin="anonymous"></script>
+</body>
+</html>
